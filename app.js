@@ -3,9 +3,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-
-
-
 app.use(function (req, res, next) {
     const now = req.requestTime = new Date()
     const method = req.method
@@ -21,8 +18,6 @@ app.use(function (req, res, next) {
     }
     next()
 })
-
-
 
 app.get('/', (req, res, next) => {
 
